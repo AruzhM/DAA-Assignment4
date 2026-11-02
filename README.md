@@ -67,3 +67,10 @@ I used ChatGPT to assist with code implementation, understanding algorithms, deb
 Aruzhan Marat
 
 SE-2525 — Astana IT University
+
+## GitHub Repository
+
+https://github.com/AruzhM/DAA-Assignment4
+
+Branch: main
+Release tag: v1.0
