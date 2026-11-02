@@ -1,10 +1,17 @@
 package editdistance;
 
-public class TwoRowsEditDistance {
+public class TwoRowsEditDistance implements EditDistance {
 
     private long operations;
 
     public int distance(String a, String b) {
+
+        /*
+         * State: previous[j] and current[j] store DP row values.
+         * Transition: match or min(top, left, diagonal) + 1.
+         * Base case: previous[j] = j; current[0] = i.
+         */
+
         operations = 0;
 
         int n = a.length();

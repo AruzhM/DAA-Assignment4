@@ -1,10 +1,17 @@
 package editdistance;
 
-public class TableEditDistance {
+public class TableEditDistance implements EditDistance {
 
     private long operations;
 
     public int distance(String a, String b) {
+
+        /*
+         * State: dp[i][j] stores the minimum edits between two prefixes.
+         * Transition: match or min(top, left, diagonal) + 1.
+         * Base case: dp[i][0] = i; dp[0][j] = j.
+         */
+
         operations = 0;
 
         int n = a.length();

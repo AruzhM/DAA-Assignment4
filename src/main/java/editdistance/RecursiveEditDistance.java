@@ -1,10 +1,17 @@
 package editdistance;
 
-public class RecursiveEditDistance {
+public class RecursiveEditDistance implements EditDistance {
 
     private long operations;
 
     public int distance(String a, String b) {
+
+        /*
+         * State: distance(i, j) is the minimum edits between two prefixes.
+         * Transition: match or min(insert, delete, replace) + 1.
+         * Base case: distance(0, j) = j; distance(i, 0) = i.
+         */
+
         operations = 0;
         return solve(a, b, a.length(), b.length());
     }
